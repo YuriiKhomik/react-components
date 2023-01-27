@@ -1,0 +1,102 @@
+[
+  {
+    "id": "id-1",
+    "url": "https://pixabay.com/get/g6b1c3fcd0e7cce1ae5edc2b072b0d1da986f1dd8fab1a3e3ff6a7a476f2eb8bbedd9be28fd8c9b732d3be113d2b0f132a0901bfe21d6f35e44b8025d28ef0204_640.jpg",
+    "title": "puppy, pet, canine",
+    "price": 500,
+    "author": {
+      "userId": 6087762,
+      "user": "PicsbyFran"
+    }
+  },
+  {
+    "id": "id-2",
+    "url": "https://pixabay.com/get/ga0ddf8e299dd27fa18680fdb40948ebad037e45f2765dab8011f4c7d25f34f977b565cc6c63b4284422ae0f33c7a48ee772d8c1acd1f2a6a7bc3199101600a2f_640.jpg",
+    "title": "dog, pet, corgi",
+    "price": 230,
+    "author": {
+      "userId": 8934889,
+      "user": "huoadg5888"
+    }
+  },
+  {
+    "id": "id-3",
+    "url": "https://pixabay.com/get/g6578b75e9f29d416739199cf1a6705e4de75b3a20fca24bd12a242a3731ce8ede524440e9f5c2c0837efebac60b8a2b1_640.jpg",
+    "title": "dog, portrait, black",
+    "price": 123,
+    "author": {
+      "userId": 14,
+      "user": "PublicDomainPictures"
+    }
+  },
+  {
+    "id": "id-4",
+    "url": "https://pixabay.com/get/ga034c9c36aef49ef67200339e8b49e4ba25f9a75fe63bbf2b920b034d3e101181ccb5b50314e7c86ad128a4906f2144aceec3647226c6d54642fe0022a00b841_640.jpg",
+    "title": "dog, christmas, santa",
+    "price": 4456,
+    "author": {
+      "userId": 607096,
+      "user": "miezekieze"
+    }
+  },
+  {
+    "id": "id-5",
+    "url": "https://pixabay.com/get/gc32578f68711c6cd35c805f52e4886b308d3a15f8aee12e7c427d7d9b07ee4e118910796b8eec72a12b9ccfc6dda86e54218074365f79f4c6d38b535f1a2f3a2_640.jpg",
+    "title": "pet, dog, sheep dog",
+    "price": 1212,
+    "author": {
+      "userId": 16058146,
+      "user": "stephencphotog"
+    }
+  },
+  {
+    "id": "id-6",
+    "url": "https://pixabay.com/get/gb856ce73a6cc6278493603c670a5d93ea3374ad9fe3626cafabb1594bd1e532f07289c4aa24049d18484efd89306712708ced92c8937f3219cc47baafb1dfd1a_640.jpg",
+    "title": "beach, puppy, dog",
+    "price": 1505,
+    "author": {
+      "userId": 3079232,
+      "user": "Spiritze"
+    }
+  },
+  {
+    "id": "id-7",
+    "url": "https://pixabay.com/get/g2d05f6e75029d7961584310a56303cf4f948f0cdba29cf89f9bd465dccd114db9d2dc92f513db06beb95f314d1bba2a2e6f4eb908116793e82bbbf1614fcba4f_640.jpg",
+    "title": "massage, dogs, friends",
+    "price": 1254,
+    "author": {
+      "userId": 3079232,
+      "user": "Spiritze"
+    }
+  },
+  {
+    "id": "id-8",
+    "url": "https://pixabay.com/get/gc03c06426e99a2aa1bae8295b7be4e9713f186e85474e151888296f0f85980ffa893b573d931f075a8a591d2bbaf8b063b6f46bcbdec028a0911ff55a96715f3_640.jpg",
+    "title": "pig dog, inner pig dog, dog",
+    "price": 546,
+    "author": {
+      "userId": 165106,
+      "user": "suju-foto"
+    }
+  },
+  {
+    "id": "id-9",
+    "url": "https://pixabay.com/get/g53e1f7c5c073fedd24890ec7929801783f5b8a9107c17aa39baaa5055b282f52ef790340f3557e284de95dfbbc447ab50ce70a1a01829bd3403321d4a7162cf8_640.jpg",
+    "title": "dog, action, pet",
+    "price": 876,
+    "author": {
+      "userId": 6248913,
+      "user": "6248913"
+    }
+  },
+  {
+    "id": "id-10",
+    "url": "https://pixabay.com/get/g721400c4cec1796c89dd141c8ef68883cfe1752dd78ac982bf4c79121ba3ab576e01db81a7aa6732d708e5a50ac936beacd6296c9d7f18f953ed378772927a9c_640.jpg",
+    "title": "donkey, long ears, portrait",
+    "price": 654,
+    "author": {
+      "userId": 4247462,
+      "user": "Marzena7"
+    }
+  }
+]

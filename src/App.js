@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+// використовуємо підхід "один файл - один компонент"
+// тут буде головний компонент нашого застосунку
+// це звичайний ECMA-Script модуль тому з нього потрібно експортувати компонент
+// він буде експортувати один компонент і це завжди export default
 
-function App() {
+// файл може називатись як з малої, так і з великої букви
+// файл може мати розширення як ...js так і ...jsx
+// в даному випадку, ми назвали його App.js
+
+// Батьківському компоненту ми передаємо дані і оголошуємо шаблон, який ми хочемо рендерити
+// після чого при виклику ми передаємо дані, які потрібно відрендерити
+
+// імпортуємо компонент Painting.js в App.js, щоби відрендерити його тут
+import Painting from "./components/Paintings";
+// дані, які нам потрібно передати в компонент Painting ми імпортуємо в той файл, де вони булуть вже безпосередньо рендеритись
+// (немає сенсу імпортувати їх в Paintings.js, тому що це просто незалежний компонент
+// він нічого не повинен знати про конкретну інформацію, яка буде рендеритись)
+import paintings from "./paintings.json";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // Закидаємо в цей батьківський компонент App все, що ми хочемо зарендерити
+    <div>
+      <Painting
+        // те, що ми передаємо сюди - це елементи майбутнього об'єкту props,
+        // тому у компоненту завжди лише одн параметр (об'єкт props)
+        // imageUrl={paintings[0].url}
+        title={paintings[0].title}
+        author={paintings[0].author.user}
+        price={paintings[0].price}
+      />
+      <Painting
+        // те, що ми передаємо сюди - це елементи майбутнього об'єкту props,
+        // тому у компоненту завжди лише одн параметр (об'єкт props)
+        imageUrl={paintings[1].url}
+        title={paintings[1].title}
+        author={paintings[1].author.user}
+        price={paintings[1].price}
+      />
+      <Painting
+        // те, що ми передаємо сюди - це елементи майбутнього об'єкту props,
+        // тому у компоненту завжди лише одн параметр (об'єкт props)
+        imageUrl={paintings[2].url}
+        title={paintings[2].title}
+        author={paintings[2].author.user}
+        price={paintings[2].price}
+      />
     </div>
   );
 }
-
-export default App;
