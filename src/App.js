@@ -10,41 +10,76 @@
 // Батьківському компоненту ми передаємо дані і оголошуємо шаблон, який ми хочемо рендерити
 // після чого при виклику ми передаємо дані, які потрібно відрендерити
 
-// імпортуємо компонент Painting.js в App.js, щоби відрендерити його тут
-import Painting from "./components/Paintings";
-// дані, які нам потрібно передати в компонент Painting ми імпортуємо в той файл, де вони булуть вже безпосередньо рендеритись
-// (немає сенсу імпортувати їх в Paintings.js, тому що це просто незалежний компонент
+// // імпортуємо компонент Painting.js в App.js, щоби відрендерити його тут
+// import Painting from "./components/Painting";
+
+// дані, які нам потрібно передати в компонент Painting ми імпортуємо в той файл, де вони будуть вже безпосередньо рендеритись
+// (немає сенсу імпортувати їх в Painting.js, тому що це просто незалежний компонент
 // він нічого не повинен знати про конкретну інформацію, яка буде рендеритись)
 import paintings from "./paintings.json";
 
+//////////////////////////////////////////////////////////////////////
+import PaintingGallery from "./components/PaintingGallery";
+
 export default function App() {
+  // нас є App, який рендерить PaintingGallery, PaintingGallery приймає в items масив
+  // об'єктів із paintings.json і рендерить в собі окремо кожен компонент Painting
   return (
-    // Закидаємо в цей батьківський компонент App все, що ми хочемо зарендерити
     <div>
-      <Painting
-        // те, що ми передаємо сюди - це елементи майбутнього об'єкту props,
-        // тому у компоненту завжди лише одн параметр (об'єкт props)
-        // imageUrl={paintings[0].url}
-        title={paintings[0].title}
-        author={paintings[0].author.user}
-        price={paintings[0].price}
-      />
-      <Painting
-        // те, що ми передаємо сюди - це елементи майбутнього об'єкту props,
-        // тому у компоненту завжди лише одн параметр (об'єкт props)
-        imageUrl={paintings[1].url}
-        title={paintings[1].title}
-        author={paintings[1].author.user}
-        price={paintings[1].price}
-      />
-      <Painting
-        // те, що ми передаємо сюди - це елементи майбутнього об'єкту props,
-        // тому у компоненту завжди лише одн параметр (об'єкт props)
-        imageUrl={paintings[2].url}
-        title={paintings[2].title}
-        author={paintings[2].author.user}
-        price={paintings[2].price}
-      />
+      <PaintingGallery items={paintings} />
     </div>
   );
+
+  // return (
+  //   // Закидаємо в цей батьківський компонент App все, що ми хочемо зарендерити
+  //   <div>
+
+  //     {/* і рендеримо все динамічно, використовуючи .map
+  //     тобто, ми рендеримо результат .map, тобто масив*/}
+  //     {/* {paintings.map((painting) => (
+  //       <Painting
+  //         // дадаємо проп "key", який не піде в DOM, він буде використовуватись лише для реакту
+  //         // key потрібен для того, щоби React ідентифіковував кожен окремий елемент, який буде рендеритись
+  //         // бо інакше для нього вони будуть всі одинакові і при зміні одного елементу, перерендерюватись будуть всі
+  //         // найкраще key брати із бекенду у вигляді айдішок etc... можна звісно, використати індекс із мепу, але
+  //         // якщо ми один елемент видалимо, то індекси у всіх клкментів поміняються і все перерендериться
+  //         // тому найкраще використовувати якусь стабільну строку
+  //         key={painting.id}
+  //         imageUrl={painting.url}
+  //         title={painting.title}
+  //         author={painting.author.user}
+  //         price={painting.price}
+  //         quantity={painting.quantity}
+  //       />
+  //     ))} */}
+
+  //     {/* <Painting
+  //       // те, що ми передаємо сюди - це елементи майбутнього об'єкту props,
+  //       // тому у компоненту завжди лише одн параметр (об'єкт props)
+  //       // imageUrl={paintings[0].url}
+  //       title={paintings[0].title}
+  //       author={paintings[0].author.user}
+  //       price={paintings[0].price}
+  //       quantity={paintings[0].quantity}
+  //     />
+  //     <Painting
+  //       // те, що ми передаємо сюди - це елементи майбутнього об'єкту props,
+  //       // тому у компоненту завжди лише одн параметр (об'єкт props)
+  //       imageUrl={paintings[1].url}
+  //       title={paintings[1].title}
+  //       author={paintings[1].author.user}
+  //       price={paintings[1].price}
+  //       quantity={paintings[1].quantity}
+  //     />
+  //     <Painting
+  //       // те, що ми передаємо сюди - це елементи майбутнього об'єкту props,
+  //       // тому у компоненту завжди лише одн параметр (об'єкт props)
+  //       imageUrl={paintings[2].url}
+  //       title={paintings[2].title}
+  //       author={paintings[2].author.user}
+  //       price={paintings[2].price}
+  //       quantity={paintings[2].quantity}
+  //     /> */}
+  //   </div>
+  // );
 }

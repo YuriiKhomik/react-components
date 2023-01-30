@@ -76,12 +76,28 @@
 // );
 
 /////////////////////////////APP.JS//////////////////////////
+// import { createRoot } from "react-dom/client";
+// // імпортуємо наш основинй компонент App
+// import App from "./App";
+
+// // у файлі index.js ми рендеримо лише компонент App
+// // а всередині компонента App ми рендеримо все решта, що нам потрібно
+// // все, що ми вкладемо в нього, буде відрендерино
+// const root = createRoot(document.querySelector("#root"));
+// root.render(<App />);
+
+//////////////////////////REACT.STRICT MODE////////////////////
+
+import React from "react";
 import { createRoot } from "react-dom/client";
-// імпортуємо наш основинй компонент App
 import App from "./App";
 
-// у файлі index.js ми рендеримо лише компонент App
-// а всередині компонента App ми рендеримо все решта, що нам потрібно
-// все, що ми вкладемо в нього, буде відрендерино
 const root = createRoot(document.querySelector("#root"));
-root.render(<App />);
+
+//огортаємо рендер нашого батьківсткого компонента
+//в суворий режим  для відлову помилок
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
