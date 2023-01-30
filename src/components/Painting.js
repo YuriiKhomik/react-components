@@ -26,7 +26,8 @@ export default function Painting(props) {
   //   console.log(props);
   return (
     <div>
-      <img src={imageUrl} alt={title} width="480" />
+      {/* якщо лівий операнд дає false то використовуємо правий операнд */}
+      <img src={imageUrl ?? defaultImage} alt={title} width="480" />
       <h2>{title}</h2>
       <p>Author: {author}</p>
       <p>Price: {price} uah</p>

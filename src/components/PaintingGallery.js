@@ -1,5 +1,7 @@
 //в якості item ми використовуємо компонент Painting, тойму імпортуємо його сюди
 import Painting from "./Painting";
+// імлпортуємо сюди проптайпи
+import PropTypes from "prop-types";
 
 // PaintingGallerry - це компонент, який побудований із менших компонентів (Paintings)
 // бажано називати не просто Painting і Paintinings, а так, щоб візуально назви більше відрізнялись
@@ -24,7 +26,7 @@ function PaintingGallery({ items }) {
             imageUrl={item.url}
             title={item.title}
             author={item.author.user}
-            // price={item.price}
+            price={item.price}
             quantity={item.quantity}
           />
         </li>
@@ -34,3 +36,20 @@ function PaintingGallery({ items }) {
 }
 
 export default PaintingGallery;
+
+// айтемсам теж прописуємо propTypes
+// нашій PaintingGallery важливо, чи в айтемси приходить масив об'єктів
+// із властивістю "ID", а всі решта властивостей - це вже справи об'єкта
+// Painting, де ми вже й так перевіряємо проптайпси
+// тобто, перевіряємо лише те, що нам потрібно саме в цьому місці
+
+PaintingGallery.propTypes = {
+  // айтемс - це масив (arrayOf)
+  items: PropTypes.arrayOf(
+    // об'єктів
+    PropTypes.shape({
+      // і тут буквально описуємо, як має виглядати об'єкт
+      id: PropTypes.string.isRequired,
+    })
+  ),
+};

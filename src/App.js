@@ -20,13 +20,18 @@ import paintings from "./paintings.json";
 
 //////////////////////////////////////////////////////////////////////
 import PaintingGallery from "./components/PaintingGallery";
+import Section from "./components/Section";
 
 export default function App() {
   // нас є App, який рендерить PaintingGallery, PaintingGallery приймає в items масив
   // об'єктів із paintings.json і рендерить в собі окремо кожен компонент Painting
   return (
     <div>
-      <PaintingGallery items={paintings} />
+      {/* <PaintingGallery items={paintings} /> */}
+      <Section title="Top of the tops">
+        <PaintingGallery items={paintings} />
+      </Section>
+      <Section />
     </div>
   );
 
@@ -83,3 +88,26 @@ export default function App() {
   //   </div>
   // );
 }
+// and//
+// true && 1; // 1 (if true => right side)
+// false && 1; // false (if false => false, because false met)
+// 0 && 2; // 0 (because 0 = false)
+
+// or//
+// true || 1 // true (because first met true is "true")
+// false || 1 // 1 (because first met true is "1")
+
+// ??//
+// The nullish coalescing (??) operator is a logical operator
+// that returns its right-hand side operand when
+// its left-hand side operand is null or undefined,
+// and otherwise returns its left - hand side operand.
+
+// true ?? 3; // true (because first met true is "true")
+// 1 ?? 3; // 1 // (because first met true is "true")
+// 0 ?? 3; // 0 (because that's how "??" operator works)
+// " " ?? 3 // ' ' (because that's how "??" operator works)
+// undefined ?? 3; // 3 (because that's how "??" operator works)
+//  null ?? 3; // 3 (because that's how "??" operator works)
+//BUT//
+// false ?? 3; // false
