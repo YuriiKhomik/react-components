@@ -28,7 +28,10 @@ export default function App() {
   return (
     <div>
       {/* <PaintingGallery items={paintings} /> */}
+      {/* якщо ми хочемо рендерити в компоненті Section будь-який контент, ми можемо зробити композицію, використавши парні теги замість одинарного*/}
+      {/* і тоді ми можемо в компонент Section додавати будь які інші компоненти */}
       <Section title="Top of the tops">
+        {/* в даному випадку - PaintingGallery - цн дитина компоненту Section */}
         <PaintingGallery items={paintings} />
       </Section>
       <Section />
